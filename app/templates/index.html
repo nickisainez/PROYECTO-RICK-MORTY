@@ -1,0 +1,31 @@
+{% extends "base.html" %} {% block content %}
+
+<h1>Lista de personajes</h1>
+
+<div class="table-responsive">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Especie</th>
+        <th>Locación</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for personaje in personajes %}
+      <tr>
+        <td>{{ personaje.id }}</td>
+        <td><a href="{{ personaje.id }}">{{ personaje.name }}</a></td>
+        <td>{{ personaje.status }}</td>
+        <td>{{ personaje.location }}</td>
+        <td><img width="100px" style="border-radius: 50% ;"
+          src="{{ personaje.image }}"></td>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+{% endblock content %}
+
+

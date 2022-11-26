@@ -1,0 +1,18 @@
+{% block content %}
+    <a href="{{url_for('personajes_ruta.index')}}">Regresar </a>
+<div>
+  <div>
+    <td><img src="{{uniqe.image}}" alt=""></td>
+  </div>
+  <div class="post__body">
+    <p >Nombre: {{ uniqe.name }}</p>
+    <p >Especie: {{ uniqe.status }}</p>
+    <p >Estado: {{ uniqe.species }}</p>
+    <p >Genero: {{ uniqe.gender }}</p>
+    <p >Origen: {{ uniqe.origin }}</p>
+    <p >Locación: {{ uniqe.location }}</p>
+    <p >Creado: {{ uniqe.created }}</p>
+
+  </div>
+</div>
+{% endblock content %}
